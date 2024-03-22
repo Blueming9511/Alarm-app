@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <style>
+
+    </style>
+
+    <!-- Box icon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+        /* HEADER  */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=League+Spartan&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300&family=Russo+One&display=swap');
+
+        :root {
+            --primary-font: "Roboto", sans-serif;
+        }
+
+        header {
+            font-family: var(--primary-font);
+            font-weight: bolder;
+            font-size: 30px;
+            text-align: center;
+            padding: 1rem;
+            background-color: #242424;
+            color: white;
+        }
+
+        .calendar,
+        .header-calendar,
+        .clock,
+        .header-clock,
+        .header-components {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-calendar,
+        .header-clock {
+            gap: 10px;
+        }
+
+        .header-components {
+            margin-top: 0.5rem;
+            gap: 3rem;
+            flex-direction: row;
+        }
+
+        .header-calendar .calendar,
+        .header-clock .clock {
+            font-size: medium;
+        }
+
+        .header-calendar .calendar {
+            color: green;
+        }
+
+        .header-clock .clock {
+            color: darkorange;
+        }
+
+        /* Console */
+
+        .console{
+            background-color: #F1F1F1;
+            height: 100vh;
+            margin: 1em;
+            border-radius: 5px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="header text">Đồng hồ báo thức online</div>
+
+        <div class="header-components">
+
+            <div class="header-calendar">
+                <svg class="calendar-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.25 1.3125C5.56066 1.3125 5.8125 1.56434 5.8125 1.875V2.44704C6.30902 2.43749 6.85605 2.43749 7.45768 2.4375H10.5423C11.144 2.43749 11.691 2.43749 12.1875 2.44704V1.875C12.1875 1.56434 12.4394 1.3125 12.75 1.3125C13.0606 1.3125 13.3125 1.56434 13.3125 1.875V2.49532C13.5074 2.51018 13.6921 2.52887 13.8668 2.55235C14.746 2.67057 15.4578 2.91966 16.0191 3.48093C16.5803 4.04221 16.8294 4.75391 16.9477 5.63323C16.9854 5.91425 17.0107 6.22094 17.0278 6.55505C17.0503 6.6158 17.0625 6.68146 17.0625 6.75C17.0625 6.80199 17.0555 6.85233 17.0422 6.90012C17.0625 7.50157 17.0625 8.1846 17.0625 8.9577V10.5423C17.0625 11.9207 17.0625 13.0124 16.9477 13.8668C16.8294 14.746 16.5803 15.4578 16.0191 16.0191C15.4578 16.5803 14.746 16.8294 13.8668 16.9477C13.0124 17.0625 11.9207 17.0625 10.5423 17.0625H7.45769C6.07937 17.0625 4.98764 17.0625 4.13324 16.9477C3.25392 16.8294 2.54221 16.5803 1.98093 16.0191C1.41966 15.4578 1.17057 14.746 1.05236 13.8668C0.937478 13.0124 0.937485 11.9207 0.9375 10.5423V8.9577C0.937493 8.18452 0.937485 7.50157 0.957758 6.90013C0.944558 6.85234 0.9375 6.80199 0.9375 6.75C0.9375 6.68147 0.949755 6.61579 0.972203 6.55505C0.989213 6.22093 1.01457 5.91425 1.05236 5.63323C1.17057 4.75392 1.41966 4.04221 1.98093 3.48093C2.54221 2.91966 3.25392 2.67057 4.13324 2.55235C4.30793 2.52887 4.49255 2.51018 4.6875 2.49532V1.875C4.6875 1.56434 4.93934 1.3125 5.25 1.3125ZM2.07232 7.3125C2.06274 7.80202 2.0625 8.3595 2.0625 9V10.5C2.0625 11.9301 2.06369 12.9461 2.16732 13.7169C2.26877 14.4714 2.45902 14.9062 2.77643 15.2236C3.09383 15.541 3.52857 15.7313 4.28314 15.8327C5.05388 15.9363 6.06988 15.9375 7.5 15.9375H10.5C11.9301 15.9375 12.9461 15.9363 13.7169 15.8327C14.4714 15.7313 14.9062 15.541 15.2236 15.2236C15.541 14.9062 15.7313 14.4714 15.8327 13.7169C15.9363 12.9461 15.9375 11.9301 15.9375 10.5V9C15.9375 8.3595 15.9373 7.80202 15.9277 7.3125H2.07232ZM15.8762 6.1875H2.12376C2.13578 6.04546 2.15014 5.91092 2.16732 5.78314C2.26877 5.02857 2.45902 4.59383 2.77643 4.27642C3.09383 3.95902 3.52857 3.76876 4.28314 3.66732C5.05388 3.56369 6.06988 3.5625 7.5 3.5625H10.5C11.9301 3.5625 12.9461 3.56369 13.7169 3.66732C14.4714 3.76876 14.9062 3.95902 15.2236 4.27642C15.541 4.59383 15.7313 5.02857 15.8327 5.78314C15.8498 5.91092 15.8642 6.04546 15.8762 6.1875Z"
+                        fill="#C7C7C7" />
+                </svg>
+                <div class="calendar">
+                    <span class="date">00</span>
+                    <span>/</span>
+                    <span class="month">00</span>
+                    <span>/</span>
+                    <span class="year">0000</span>
+                </div>
+            </div>
+
+            <div class="header-clock">
+                <svg class="clock-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M9.99999 2.29175C5.7428 2.29175 2.29166 5.74289 2.29166 10.0001C2.29166 14.2572 5.7428 17.7084 9.99999 17.7084C14.2572 17.7084 17.7083 14.2572 17.7083 10.0001C17.7083 5.74289 14.2572 2.29175 9.99999 2.29175ZM1.04166 10.0001C1.04166 5.05253 5.05244 1.04175 9.99999 1.04175C14.9476 1.04175 18.9583 5.05253 18.9583 10.0001C18.9583 14.9477 14.9476 18.9584 9.99999 18.9584C5.05244 18.9584 1.04166 14.9477 1.04166 10.0001ZM9.99999 6.04175C10.3452 6.04175 10.625 6.32157 10.625 6.66675V9.74116L12.5252 11.6415C12.7693 11.8856 12.7693 12.2812 12.5252 12.5253C12.2812 12.7694 11.8855 12.7694 11.6414 12.5253L9.55807 10.442C9.44082 10.3248 9.37499 10.1658 9.37499 10.0001V6.66675C9.37499 6.32157 9.65482 6.04175 9.99999 6.04175Z"
+                        fill="#C7C7C7" />
+                </svg>
+
+                <div class="clock">
+                    <span class="hrs">00</span>
+                    <span>:</span>
+                    <span class="mins">00</span>
+                    <span>:</span>
+                    <span class="sec">00</span>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+    <main>
+        <div class="console">
+
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        function showDate() {
+
+            setInterval(() => {
+                let Currentdate = new Date;
+                console.log(Currentdate);
+                let date = document.querySelector(".date");
+                let month = document.querySelector(".month");
+                let year = document.querySelector(".year");
+
+                month.textContent = ((Currentdate.getMonth() + 1) < 10 ? "0" + (Currentdate.getMonth() + 1) : (Currentdate.getMonth() + 1));  // Month is zero-indexed (January is 0)
+                date.textContent = ((Currentdate.getDate()) < 10 ? "0" + (Currentdate.getDate()) : (Currentdate.getDate()));
+                year.textContent = Currentdate.getFullYear();
+            }, 1000)
+        }
+
+        function showTime() {
+            setInterval(() => {
+                let Currentime = new Date;
+
+                let hrs = document.querySelector(".hrs");
+                let mins = document.querySelector(".mins");
+                let sec = document.querySelector(".sec");
+
+                hrs.textContent = ((Currentime.getHours()) < 10 ? "0" + (Currentime.getHours()) : (Currentime.getHours()));
+                mins.textContent = ((Currentime.getMinutes()) < 10 ? "0" + (Currentime.getMinutes()) : (Currentime.getMinutes()));
+                sec.textContent = ((Currentime.getSeconds()) < 10 ? "0" + (Currentime.getSeconds()) : (Currentime.getSeconds()));
+
+            }, 1000)
+        }
+
+
+
+        showDate();
+        showTime();
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
