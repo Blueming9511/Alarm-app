@@ -44,7 +44,6 @@ function showTime () {
 showDate()
 showTime()
 
-
 // append the value to option  in dropdown menu
 let hours = document.querySelector('#hours')
 for (let hour = 0; hour < 24; hour++) {
@@ -69,35 +68,71 @@ for (let min = 0; min <= 60; min++) {
   mins.appendChild(optionMins)
 }
 
-
-
-
-// Add event listener for plus and minus
-document.querySelector('.plus').addEventListener('click', () => {
-  const selectElement = document.querySelector("select"); // Corrected the selector
+// Add event listener for plus and minus For hours picker
+document.querySelector('.hrs-picker .plus').addEventListener('click', () => {
+  const selectElement = document.querySelector('.time-part.hours') // Corrected the selector
 
   for (let i = 0; i < selectElement.options.length; i++) {
-      const option = selectElement.options[i];
+    const option = selectElement.options[i]
 
-      if (option.selected) { // Use 'selected' property to check if the option is currently selected
-          const nextOption = selectElement.options[i + 1] || selectElement.options[0]; // Get the next option or wrap around to the first option
-          nextOption.selected = true; // Set the next option as selected
-          break; // Exit the loop after finding the current selected option
-      }
+    if (option.selected) {
+      // Use 'selected' property to check if the option is currently selected
+      const nextOption =
+        selectElement.options[i + 1] || selectElement.options[0] // Get the next option or wrap around to the first option
+      nextOption.selected = true // Set the next option as selected
+      break // Exit the loop after finding the current selected option
+    }
   }
-});
+})
+document.querySelector('.hrs-picker .minus').addEventListener('click', () => {
+  const selectElement = document.querySelector('.time-part.hours')
+
+  for (let i = 0; i < selectElement.options.length; i++) {
+    const option = selectElement.options[i]
+
+    if (option.selected) {
+      const prevOption =
+        selectElement.options[i - 1] ||
+        selectElement.options[selectElement.options.length - 1]
+      prevOption.selected = true
+      break
+    }
+  }
+})
+
+// Add event listener for plus and minus for minutes picker
+document.querySelector('.mins-picker .plus').addEventListener('click', () => {
+  const selectElement = document.querySelector('.time-part.mins') // Corrected the selector
+
+  for (let i = 0; i < selectElement.options.length; i++) {
+    const option = selectElement.options[i]
+
+    if (option.selected) {
+      // Use 'selected' property to check if the option is currently selected
+      const nextOption =
+        selectElement.options[i + 1] || selectElement.options[0] // Get the next option or wrap around to the first option
+      nextOption.selected = true // Set the next option as selected
+      break // Exit the loop after finding the current selected option
+    }
+  }
+})
 
 // Add event listener for minus
-document.querySelector('.minus').addEventListener('click', () => {
-  const selectElement = document.querySelector("select");
+document.querySelector('.mins-picker .minus').addEventListener('click', () => {
+  const selectElement = document.querySelector('.time-part.mins')
 
   for (let i = 0; i < selectElement.options.length; i++) {
-      const option = selectElement.options[i];
+    const option = selectElement.options[i]
 
-      if (option.selected) {
-          const prevOption = selectElement.options[i - 1] || selectElement.options[selectElement.options.length - 1];
-          prevOption.selected = true;
-          break;
-      }
+    if (option.selected) {
+      const prevOption =
+        selectElement.options[i - 1] ||
+        selectElement.options[selectElement.options.length - 1]
+      prevOption.selected = true
+      break
+    }
   }
-});
+})
+
+
+// time shortcut
