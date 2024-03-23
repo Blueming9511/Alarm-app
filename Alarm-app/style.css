@@ -1,60 +1,121 @@
-      /* HEADER  */
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=League+Spartan&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300&family=Russo+One&display=swap');
+/* HEADER  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&family=League+Spartan&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rowdies:wght@300&family=Russo+One&display=swap");
 
-      :root {
-          --primary-font: "Roboto", sans-serif;
-      }
+:root {
+  --primary-font: "Roboto", sans-serif;
+}
 
-      header {
-          font-family: var(--primary-font);
-          font-weight: bolder;
-          font-size: 30px;
-          text-align: center;
-          padding: 1rem;
-          background-color: #242424;
-          color: white;
-      }
+header {
+  font-family: var(--primary-font);
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+  padding: 1rem;
+  background-color: #242424;
+  color: white;
+}
 
-      .calendar,
-      .header-calendar,
-      .clock,
-      .header-clock,
-      .header-components {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
+.calendar,
+.header-calendar,
+.clock,
+.header-clock,
+.header-components {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-      .header-calendar,
-      .header-clock {
-          gap: 10px;
-      }
+.header-calendar,
+.header-clock {
+  gap: 10px;
+}
 
-      .header-components {
-          margin-top: 0.5rem;
-          gap: 3rem;
-          flex-direction: row;
-      }
+.header-components {
+  margin-top: 0.5rem;
+  gap: 3rem;
+  flex-direction: row;
+}
 
-      .header-calendar .calendar,
-      .header-clock .clock {
-          font-size: medium;
-      }
+.header-calendar .calendar,
+.header-clock .clock {
+  font-size: medium;
+}
 
-      .header-calendar .calendar {
-          color: green;
-      }
+.header-calendar .calendar {
+  color: green;
+}
 
-      .header-clock .clock {
-          color: darkorange;
-      }
+.header-clock .clock {
+  color: darkorange;
+}
 
-      /* Console */
+/* Console */
 
-      .console{
-          background-color: #F1F1F1;
-          height: 100vh;
-          margin: 1em;
-          border-radius: 5px;
-          padding: 1em;
-      }
+.console {
+  background-color: #f1f1f1;
+  height: 100vh;
+  margin: 1em;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.time-picker {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.time-part {
+  padding: 10px 4rem;
+  font-size: 30px;
+  font-weight: bolder;
+  border-width: 0.07cm;
+  border-color: #0073de;
+}
+
+@media only screen and (max-width: 631px) {
+  .time-picker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hrs-picker,
+.mins-picker {
+  display: flex;
+}
+
+.plus,
+.minus {
+  cursor: pointer;
+  background-color: #0073de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.minus {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.plus {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.time-picker-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  
+}
+
+.time-picker-label h4{
+  font-weight: bolder;
+
+}
